@@ -1,0 +1,27 @@
+{
+  "name": "share-register",
+  "version": "1.0.0",
+  "description": "minimum share register project to learn azure services",
+  "main": "app.jx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgotlelelo-cmd/share-register.git"
+  },
+  "author": "kgotlelelo Masenamela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgotlelelo-cmd/share-register/issues"
+  },
+  "homepage": "https://github.com/kgotlelelo-cmd/share-register#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

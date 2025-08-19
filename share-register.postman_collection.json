@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "5f2efb37-edb8-4676-a93c-5120270cf71f",
+		"name": "share-register",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42408191"
+	},
+	"item": [
+		{
+			"name": "addShareClass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"ORD\",\r\n    \"name\": \"Ordinary Shares\",\r\n    \"authorizedShares\": 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/shares/share-classes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"share-classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addShareholder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"INDIVIDUAL\",\r\n    \"name\": \"Alice\",\r\n    \"email\": \"alice@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/shares/shareholders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"shareholders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shareClassId\": 1,\r\n    \"type\": \"ISSUE\",\r\n    \"toShareholderId\": \"1\",\r\n    \"quantity\": 600000,\r\n    \"note\": \"Founder allocation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/shares/transactions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getShareClasses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/shares/share-classes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"share-classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getShareholders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/shares/shareholders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"shareholders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCapTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/shares/cap-table",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"cap-table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClassTotals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/shares/class-totals",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"class-totals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/shares/transactions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"shares",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
